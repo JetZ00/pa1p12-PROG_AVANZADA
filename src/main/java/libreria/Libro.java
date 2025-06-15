@@ -2,7 +2,7 @@ package libreria;
 
 public class Libro {
 
-    private double porcIVA = 10.0;
+    private static double porcIVA = 10.0;
     private String autor;
     private String titulo;
     private double precioBase;
@@ -31,7 +31,7 @@ public class Libro {
         return precioBase;
     }
 
-    public double getIVA(){
+    public static double getIVA(){
         return porcIVA;
     }
 
@@ -43,7 +43,7 @@ public class Libro {
         return "("+getAutor()+"; "+getTitulo()+"; "+getPrecioBase()+"; "+getIVA()+"%; "+getPrecioFinal()+")";
     }
 
-    public void setPorcIVA(double porcIVA) {
-        this.porcIVA = porcIVA;
+    public static void setPorcIVA(double porcIVA) {
+        Libro.porcIVA = porcIVA;
     }
 }
